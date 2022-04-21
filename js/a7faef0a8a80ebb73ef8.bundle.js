@@ -5654,26 +5654,26 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 var Handlebars = __webpack_require__(/*! ../../node_modules/handlebars/runtime.js */ "./node_modules/handlebars/runtime.js");
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
-    var stack1, helper, alias1=container.escapeExpression, alias2=depth0 != null ? depth0 : (container.nullContext || {}), alias3=container.hooks.helperMissing, alias4="function", lookupProperty = container.lookupProperty || function(parent, propertyName) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3="function", alias4=container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
           return parent[propertyName];
         }
         return undefined
     };
 
-  return "<div class=\"card articles__item\" style=\"width: 20rem;\">\r\n    <img src=\""
-    + alias1(container.lambda(((stack1 = (depth0 != null ? lookupProperty(depth0,"owner") : depth0)) != null ? lookupProperty(stack1,"avatar_url") : stack1), depth0))
-    + "\" class=\"card-img-top articles__item-img\" alt=\"\">\r\n    <div class=\"card-body articles__item-body\">\r\n        <a href=\""
-    + alias1(((helper = (helper = lookupProperty(helpers,"html_url") || (depth0 != null ? lookupProperty(depth0,"html_url") : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"html_url","hash":{},"data":data,"loc":{"start":{"line":5,"column":17},"end":{"line":5,"column":29}}}) : helper)))
-    + "\" target=\"_blank\" class=\"articles__item-link\">\r\n            <h5 class=\"card-title articles__item-title\">"
-    + alias1(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":6,"column":56},"end":{"line":6,"column":64}}}) : helper)))
-    + "</h5>\r\n        </a>\r\n        <p class=\"card-text articles__item-descr\">"
-    + alias1(((helper = (helper = lookupProperty(helpers,"description") || (depth0 != null ? lookupProperty(depth0,"description") : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"description","hash":{},"data":data,"loc":{"start":{"line":8,"column":50},"end":{"line":8,"column":65}}}) : helper)))
-    + "</p>\r\n    </div>\r\n    <ul class=\"list-group list-group-flush articles__group\">\r\n        <li class=\"list-group-item articles__group-item articles__group-lang\"><span class=\"articles__group-lang--part\">Language:</span> "
-    + alias1(((helper = (helper = lookupProperty(helpers,"language") || (depth0 != null ? lookupProperty(depth0,"language") : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"language","hash":{},"data":data,"loc":{"start":{"line":11,"column":136},"end":{"line":11,"column":148}}}) : helper)))
-    + "</li>\r\n        <li class=\"list-group-item articles__group-item articles__group-update\"><span class=\"articles__group-update--part\">Update:</span> "
-    + alias1(((helper = (helper = lookupProperty(helpers,"updated_at") || (depth0 != null ? lookupProperty(depth0,"updated_at") : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"updated_at","hash":{},"data":data,"loc":{"start":{"line":12,"column":138},"end":{"line":12,"column":152}}}) : helper)))
-    + "</li>\r\n    </ul>\r\n</div>\r\n";
+  return "<a href=\""
+    + alias4(((helper = (helper = lookupProperty(helpers,"html_url") || (depth0 != null ? lookupProperty(depth0,"html_url") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"html_url","hash":{},"data":data,"loc":{"start":{"line":2,"column":9},"end":{"line":2,"column":21}}}) : helper)))
+    + "\" target=\"_blank\" class=\"articles__item-link\">\r\n    <div class=\"card articles__item\" style=\"width: 20rem;\">\r\n        <img src=\""
+    + alias4(container.lambda(((stack1 = (depth0 != null ? lookupProperty(depth0,"owner") : depth0)) != null ? lookupProperty(stack1,"avatar_url") : stack1), depth0))
+    + "\" class=\"card-img-top articles__item-img\" alt=\"\">\r\n        <div class=\"card-body articles__item-body\">\r\n            <h5 class=\"card-title articles__item-title\">"
+    + alias4(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":6,"column":56},"end":{"line":6,"column":64}}}) : helper)))
+    + "</h5>\r\n            <p class=\"card-text articles__item-descr\">"
+    + alias4(((helper = (helper = lookupProperty(helpers,"description") || (depth0 != null ? lookupProperty(depth0,"description") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data,"loc":{"start":{"line":7,"column":54},"end":{"line":7,"column":69}}}) : helper)))
+    + "</p>\r\n        </div>\r\n        <ul class=\"list-group list-group-flush articles__group\">\r\n            <li class=\"list-group-item articles__group-item articles__group-lang\"><span\r\n                    class=\"articles__group-lang--part\">Language:</span> "
+    + alias4(((helper = (helper = lookupProperty(helpers,"language") || (depth0 != null ? lookupProperty(depth0,"language") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"language","hash":{},"data":data,"loc":{"start":{"line":11,"column":72},"end":{"line":11,"column":84}}}) : helper)))
+    + "</li>\r\n            <li class=\"list-group-item articles__group-item articles__group-update\"><span\r\n                    class=\"articles__group-update--part\">Update:</span> "
+    + alias4(((helper = (helper = lookupProperty(helpers,"updated_at") || (depth0 != null ? lookupProperty(depth0,"updated_at") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"updated_at","hash":{},"data":data,"loc":{"start":{"line":13,"column":72},"end":{"line":13,"column":86}}}) : helper)))
+    + "</li>\r\n        </ul>\r\n    </div>\r\n</a>\r\n";
 },"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
@@ -5682,7 +5682,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),depth0,{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":1,"column":0},"end":{"line":15,"column":9}}})) != null ? stack1 : "");
+  return ((stack1 = lookupProperty(helpers,"each").call(depth0 != null ? depth0 : (container.nullContext || {}),depth0,{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":1,"column":0},"end":{"line":17,"column":9}}})) != null ? stack1 : "");
 },"useData":true});
 
 /***/ }),
@@ -22685,4 +22685,4 @@ module.exports = getWDSMetadata;
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=e616bd6dd2da9957a171.bundle.js.map
+//# sourceMappingURL=a7faef0a8a80ebb73ef8.bundle.js.map
