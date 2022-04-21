@@ -105,6 +105,7 @@ width: 400px;
 }
 
 .articles__item {
+  height: 100%;
   background-color: #212121;
   box-shadow: 0px 4px 250px rgba(0, 0, 0, 0.25);
   border: 2px solid black;
@@ -115,13 +116,15 @@ width: 400px;
   display: block;
   min-height: 77px;
 
-  color: orange;
+  // color: orange;
   text-decoration: none;
 }
 
-.articles__item-link:hover .articles__item-title {
-  color: orange;
-  border-bottom: 1px solid orange;
+.articles__item-link:hover .articles__item {
+  // text-decoration: none;
+  box-shadow: 0px 4px 250px orange;
+  // color: orange;
+  // border-bottom: 1px solid orange;
 }
 
 .articles__item-title {
@@ -130,12 +133,16 @@ width: 400px;
   font-size: 30px;
   line-height: 1.2;
   text-align: center;
+
+  color: orange;
 }
 
 .articles__item-descr {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
+
+  color: #ffffff;
 }
 
 .articles__group-item {
