@@ -5,7 +5,6 @@ const refs = {
   loadMoreBtnLable: document.querySelector(
     'button[data-action="load-more"] > .label'
   ),
-  // spinner: document.querySelector("#spinner"),
   loadMoreBtnSpinner: document.querySelector(
     'button[data-action="load-more"] > .spinner'
   ),
