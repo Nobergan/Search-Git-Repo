@@ -497,8 +497,6 @@ __webpack_require__.r(__webpack_exports__);
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
- // import "./styles/materialize.css";
-// import "./js/materialize";
 
 
 
@@ -509,12 +507,9 @@ _js_refs__WEBPACK_IMPORTED_MODULE_3__["default"].searchForm.addEventListener("su
 _js_refs__WEBPACK_IMPORTED_MODULE_3__["default"].loadMoreBtn.addEventListener("click", spinBtnLoad);
 
 function handleSearchForm(event) {
-  event.preventDefault(); // console.log(event.currentTarget.elements.query);
-
-  var form = event.currentTarget; // console.log(form);
-
-  _js_news_service__WEBPACK_IMPORTED_MODULE_1__["default"].query = form.elements.query.value; // console.log(searchQuery);
-
+  event.preventDefault();
+  var form = event.currentTarget;
+  _js_news_service__WEBPACK_IMPORTED_MODULE_1__["default"].query = form.elements.query.value;
   clearArticles();
   _js_news_service__WEBPACK_IMPORTED_MODULE_1__["default"].resetPage();
   spinBtnLoad();
@@ -522,18 +517,10 @@ function handleSearchForm(event) {
 }
 
 function spinBtnLoad() {
-  // refs.loadMoreBtn.classList.add("is-hidden");
-  // refs.spinner.classList.remove("is-hidden");
   _js_components_load_button__WEBPACK_IMPORTED_MODULE_4__["default"].enable();
   _js_news_service__WEBPACK_IMPORTED_MODULE_1__["default"].fetchArticles().then(function (articles) {
     console.log(articles);
-    (0,_js_update_articles_markup__WEBPACK_IMPORTED_MODULE_2__["default"])(articles); // refs.loadMoreBtn.classList.remove("is-hidden");
-    // console.log(document.documentElement.offsetHeight);
-    // window.scrollTo({
-    //   top: document.documentElement.offsetHeight,
-    //   behavior: "smooth",
-    // });
-
+    (0,_js_update_articles_markup__WEBPACK_IMPORTED_MODULE_2__["default"])(articles);
     _js_components_load_button__WEBPACK_IMPORTED_MODULE_4__["default"].showBtn();
     _js_components_load_button__WEBPACK_IMPORTED_MODULE_4__["default"].disable();
     catchError(articles);
@@ -702,13 +689,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_notification__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/notification */ "./src/js/components/notification.js");
-/* harmony import */ var _components_load_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/load-button */ "./src/js/components/load-button.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
-
-// const apiKey = "07a7a2bfb39048e592d680b5ca5dc675";
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   searchQuery: "",
@@ -725,24 +707,15 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
   fetchArticles: function fetchArticles() {
     var _this = this;
 
-    var url = "https://api.github.com/search/repositories?q=".concat(this.searchQuery, "&client_id=").concat(this.clientId, "&client_secret=").concat(this.clientSecret, "&page=").concat(this.page, "&per_page=").concat(this.repoCount); // const options = {
-    //   headers: { Authorization: apiKey },
-    // };
-
+    var url = "https://api.github.com/search/repositories?q=".concat(this.searchQuery, "&client_id=").concat(this.clientId, "&client_secret=").concat(this.clientSecret, "&page=").concat(this.page, "&per_page=").concat(this.repoCount);
     return fetch(url).then(function (res) {
       return res.json();
     }).then(function (data) {
-      _this.incrementPage(); // console.log(data);
-      // if (data.total_count === 0) {
-      //   // loadBtn.hide();
-      //   throw new Error(notify.showError());
-      //   // throw new Error(loadBtn.hide());
-      // }
-
+      _this.incrementPage();
 
       return data.items;
     }).catch(function (error) {
-      console.log(error); // return error.message;
+      console.log(error);
     });
   },
 
@@ -792,7 +765,6 @@ var refs = {
   searchForm: document.querySelector(".js-search-form"),
   loadMoreBtn: document.querySelector('[data-action="load-more"]'),
   loadMoreBtnLable: document.querySelector('button[data-action="load-more"] > .label'),
-  // spinner: document.querySelector("#spinner"),
   loadMoreBtnSpinner: document.querySelector('button[data-action="load-more"] > .spinner')
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refs);
@@ -835,7 +807,6 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 
 function updateArticlesMarkup(articles) {
-  //   console.log(articles);
   var markUp = _templates_articles_hbs__WEBPACK_IMPORTED_MODULE_0___default()(articles);
   _refs__WEBPACK_IMPORTED_MODULE_1__["default"].articles.insertAdjacentHTML("beforeend", markUp);
 }
@@ -22685,4 +22656,4 @@ module.exports = getWDSMetadata;
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=a7faef0a8a80ebb73ef8.bundle.js.map
+//# sourceMappingURL=56dfa8b2b0fa925bd2d2.bundle.js.map
